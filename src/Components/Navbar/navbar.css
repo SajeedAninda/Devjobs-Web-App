@@ -1,0 +1,7 @@
+.navbar {
+    background-image: url('../../assets/desktop/bg-pattern-header.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw;
+    background-position: top left;
+}

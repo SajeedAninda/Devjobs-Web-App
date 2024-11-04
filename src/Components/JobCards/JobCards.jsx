@@ -10,11 +10,17 @@ const JobCards = () => {
     }, []);
 
     return (
-        <div className='w-[80%] mx-auto pt-24 pb-12'>
-            <div className='grid grid-cols-3 gap-6'>
+        <div className='w-[80%] mx-auto py-24'>
+            <div className='grid grid-cols-3 gap-8 gap-y-12'>
                 {
                     jobs?.map((job, index) => (
-                        <div key={index} className="card bg-white dark:bg-[#19202d] px-8 py-12 shadow-sm rounded-md">
+                        <div key={index} className="card bg-white dark:bg-[#19202d] px-8 py-12 shadow-sm rounded-md relative">
+                            <img
+                                style={{ backgroundColor: job?.logoBackground }}
+                                src={job?.logo}
+                                alt=""
+                                className="w-12 h-12 rounded-2xl object-scale-down p-2 absolute left-8 -top-5"
+                            />
                             <div className='flex gap-4 items-center text-[#6e8098] text-[16px] font-semibold'>
                                 <p className='pb-2'>{job?.postedAt}</p>
                                 <span>.</span>

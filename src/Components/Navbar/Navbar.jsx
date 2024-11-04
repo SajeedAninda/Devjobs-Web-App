@@ -25,7 +25,7 @@ const Navbar = () => {
                         onClick={toggleDarkMode}
                         className={`bg-white rounded-[40px] w-[44px] h-[22px] flex items-center px-1 py-1 group`}
                     >
-                        <div className={`transform transition-transform duration-300 ease-in-out ${isDarkMode ? 'translate-x-[22px]' : 'translate-x-0'} bg-[#5964e0] w-[15px] h-[15px] rounded-full group group-hover:opacity-55 transition-all delay-75`}>
+                        <div className={`transform transition-transform duration-300 ease-in-out ${isDarkMode ? 'translate-x-[22px]' : 'translate-x-0'} bg-[#5964e0] w-[15px] h-[15px] rounded-full group group-hover:opacity-55 transition duration-200 ease-in-out`}>
                         </div>
                     </button>
                     <img className='w-[20px]' src={moonIcon} alt="Moon Icon" />

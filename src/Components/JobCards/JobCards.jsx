@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const JobCards = () => {
     const [jobs, setJobs] = useState([]);
@@ -28,9 +29,9 @@ const JobCards = () => {
                             </div>
 
                             <div>
-                                <p className='text-[20px] text-[#192028] dark:text-white font-bold pb-3'>
+                                <Link to={`/${job?.company}${job?.position}`} className='text-[20px] text-[#192028] dark:text-white font-bold pb-3  cursor-pointer hover:opacity-50 transition duration-200 delay-75 ease-in-out'>
                                     {job?.position}
-                                </p>
+                                </Link>
 
                                 <p className='text-[#6e8098] text-[16px] font-semibold'>
                                     {job?.company}

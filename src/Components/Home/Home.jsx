@@ -44,7 +44,6 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-
             <JobCards></JobCards>
         </div>
     );

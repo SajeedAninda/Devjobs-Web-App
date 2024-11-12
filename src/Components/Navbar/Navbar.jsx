@@ -3,6 +3,7 @@ import "./navbar.css";
 import logo from "../../assets/desktop/logo.svg"
 import moonIcon from "../../assets/desktop/icon-moon.svg";
 import sunIcon from "../../assets/desktop/icon-sun.svg";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,9 +16,9 @@ const Navbar = () => {
     return (
         <nav className='h-[30vh] pt-12 pb-24 w-full navbar bg-[#e7e8e9] dark:bg-[#121721]'>
             <div className='w-[80%] mx-auto flex justify-between items-center'>
-                <div>
+                <Link to={"/"}>
                     <img src={logo} alt="" />
-                </div>
+                </Link>
 
                 <div className='flex items-center gap-3'>
                     <img className='w-[20px]' src={sunIcon} alt="Sun Icon" />

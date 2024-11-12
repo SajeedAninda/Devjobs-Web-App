@@ -19,7 +19,7 @@ const JobDetails = () => {
     console.log(matchedJob)
 
     return (
-        <div className='bg-[#e7e8e9] h-fit dark:bg-[#121721] relative'>
+        <div className='bg-[#e7e8e9] h-screen dark:bg-[#121721] relative py-24'>
             <div className="floatingBar bg-white dark:bg-[#19202d] w-[60%] h-[23vh] mx-auto shadow-lg rounded-lg absolute -top-[80px] left-1/2 transform -translate-x-1/2 flex items-center">
                 <div className='w-[20%] h-full flex justify-center items-center rounded-l-lg' style={{ backgroundColor: matchedJob?.logoBackground }}>
                     <img
@@ -41,12 +41,35 @@ const JobDetails = () => {
                     </div>
 
                     <div>
-                    <Link to={`${matchedJob?.website}`} className='px-5 py-4 rounded-md text-[#5964e0] dark:text-white text-[16px] font-bold bg-[#eeeffc] hover:bg-[#939bf4] dark:bg-[#303642] dark:hover:bg-[#696e76] transition duration-200 delay-75 ease-in-out'>
-                        Company Site
-                    </Link>
+                        <Link to={`${matchedJob?.website}`} className='px-5 py-4 rounded-md text-[#5964e0] dark:text-white text-[16px] font-bold bg-[#eeeffc] hover:bg-[#939bf4] dark:bg-[#303642] dark:hover:bg-[#696e76] transition duration-200 delay-75 ease-in-out'>
+                            Company Site
+                        </Link>
                     </div>
                 </div>
 
+            </div>
+
+            <div className='detailsSection bg-white dark:bg-[#19202d] w-[60%] mx-auto px-12 py-8 rounded-lg'>
+                <div className='flex gap-4 items-center text-[#6e8098] text-[18px] font-medium'>
+                    <p className='pb-2'>{matchedJob?.postedAt}</p>
+                    <span>.</span>
+                    <p className='pb-2'>{matchedJob?.contract}</p>
+                </div>
+
+                <div >
+                    <div className='flex justify-between items-center'>
+                        <h2 className='text-[28px] text-[#121721] dark:text-white font-bold'>
+                            {matchedJob?.position}
+                        </h2>
+                        <button className='px-8 py-3 rounded-md text-white text-[16px] font-semibold bg-[#5964e0] hover:bg-[#949beb] transition duration-200 delay-75 ease-in-out'>
+                            Apply Now
+                        </button>
+                    </div>
+                    <p className='mt-2 text-[14px] text-[#5964e0] font-semibold'>
+                        {matchedJob?.location}
+                    </p>
+
+                </div>
             </div>
         </div>
     );

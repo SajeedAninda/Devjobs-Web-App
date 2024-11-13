@@ -39,7 +39,7 @@ const JobCards = ({ title, location, isFullTime, handleSearch }) => {
 
     return (
         <div className='w-[80%] mx-auto py-24'>
-            <div className='grid grid-cols-3 gap-8 gap-y-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12'>
                 {filteredJobs.length > 0 ? (
                     filteredJobs.slice(0, visibleJobs).map((job, index) => (
                         <div key={index} className="card bg-white dark:bg-[#19202d] px-8 py-12 shadow-sm rounded-md relative">

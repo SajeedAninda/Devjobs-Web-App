@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <div className='bg-[#e7e8e9] h-fit dark:bg-[#121721] relative'>
-            <form onSubmit={handleSearch} className="floatingBar bg-white dark:bg-[#19202d] w-[80%] h-[13vh] mx-auto shadow-lg rounded-lg absolute -top-[80px] left-1/2 transform -translate-x-1/2 flex justify-between items-center">
+            <form onSubmit={handleSearch} className="floatingBar bg-white dark:bg-[#19202d] w-[90%] lg:w-[80%] h-[15vh] lg:h-[13vh] mx-auto shadow-lg rounded-lg absolute -top-[30px] lg:-top-[80px] left-1/2 transform -translate-x-1/2 flex justify-between items-center">
 
                 <div className="flex-1 h-full pl-16 pr-4 flex items-center relative border-r border-[#787677]">
                     <input

@@ -16,8 +16,6 @@ const Home = () => {
 
         setTitle(searchTitle);
         setLocation(searchLocation);
-
-        console.log("Title:", searchTitle, "Location:", searchLocation, "Full Time:", isFullTime);
     };
 
     const handleCheckboxChange = (e) => {

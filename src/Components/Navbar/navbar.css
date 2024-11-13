@@ -5,3 +5,17 @@
     background-size: 100vw;
     background-position: top left;
 }
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .navbar {
+        background-image: url('../../assets/tablet/bg-pattern-header.svg');
+    }
+}
+
+/* Mobile View */
+@media (max-width: 640px) {
+    .navbar {
+        background-image: url('../../assets/mobile/bg-pattern-header.svg');
+    }
+}

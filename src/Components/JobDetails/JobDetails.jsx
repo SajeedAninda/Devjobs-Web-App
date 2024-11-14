@@ -20,8 +20,8 @@ const JobDetails = () => {
 
     return (
         <div className='bg-[#e7e8e9] h-fit dark:bg-[#121721] relative py-24'>
-            <div className="floatingBar bg-white dark:bg-[#19202d] w-[60%] h-[23vh] mx-auto shadow-lg rounded-lg absolute -top-[80px] left-1/2 transform -translate-x-1/2 flex items-center">
-                <div className='w-[20%] h-full flex justify-center items-center rounded-l-lg' style={{ backgroundColor: matchedJob?.logoBackground }}>
+            <div className="floatingBar bg-white dark:bg-[#19202d] w-[90%] lg:w-[60%] h-[23vh] mx-auto shadow-lg rounded-lg absolute -top-[40px] lg:-top-[80px] left-1/2 transform -translate-x-1/2 flex items-center">
+                <div className='w-[30%] lg:w-[20%] h-full flex justify-center items-center rounded-l-lg' style={{ backgroundColor: matchedJob?.logoBackground }}>
                     <img
 
                         src={matchedJob?.logo}
@@ -30,7 +30,7 @@ const JobDetails = () => {
                     />
                 </div>
 
-                <div className='w-[80%] py-8 px-12 flex justify-between items-center'>
+                <div className='w-[70%] lg:w-[80%] py-4 lg:py-8 px-6 lg:px-12 flex justify-between items-center'>
                     <div>
                         <p className='text-[#192028] text-[24px] dark:text-white font-bold '>
                             {matchedJob?.company}
@@ -40,7 +40,7 @@ const JobDetails = () => {
                         </p>
                     </div>
 
-                    <div>
+                    <div className='hidden md:block'>
                         <Link to={`${matchedJob?.website}`} className='px-5 py-4 rounded-md text-[#5964e0] dark:text-white text-[16px] font-bold bg-[#eeeffc] hover:bg-[#939bf4] dark:bg-[#303642] dark:hover:bg-[#696e76] transition duration-200 delay-75 ease-in-out'>
                             Company Site
                         </Link>
@@ -49,7 +49,7 @@ const JobDetails = () => {
 
             </div>
 
-            <div className='detailsSection bg-white dark:bg-[#19202d] w-[60%] mx-auto px-12 py-8 rounded-lg'>
+            <div className='detailsSection bg-white dark:bg-[#19202d] w-[90%] lg:w-[60%] mx-auto px-12 py-8 rounded-lg'>
                 <div className='flex gap-4 items-center text-[#6e8098] text-[18px] font-medium'>
                     <p className='pb-2'>{matchedJob?.postedAt}</p>
                     <span>.</span>
